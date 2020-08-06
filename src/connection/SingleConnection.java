@@ -5,17 +5,17 @@ import java.sql.DriverManager;
 
 /*
  * Classe SingleConnection
- * Respons·vel Por Fazer a Conex„o com o BD
+ * Respons√°vel Por Fazer a Conex√£o com o BD
  * @author Filipe Pereira Lara
  */
 public class SingleConnection {
 	private static String url = "jdbc:postgresql://localhost:5432/posjava?autoReconnect=true";
 	private static String usuario = "postgres";
-	private static String senha = "W#rmpqbs3*$";
+	private static String senha = "teste";
 	private static Connection connection = null;
 	
 	/*
-	 * Chamada Est·tica do MÈtodo conectar()
+	 * Chamada Est√°tica do M√©todo conectar()
 	 */
 	static {
 		conectar();
@@ -23,15 +23,15 @@ public class SingleConnection {
 	
 	/*
 	 * Construtor da Classe SingleConnection()
-	 * Chama o MÈtodo conectar()
+	 * Chama o M√©todo conectar()
 	 */
 	public SingleConnection() {
 		conectar();
 	}
 	
 	/*
-	 * MÈtodo conectar()
-	 * ProvÍ os Meios de Conex„o ao BD
+	 * M√©todo conectar()
+	 * Prov√™ os Meios de Conex√£o ao BD
 	 */
 	private static void conectar() {
 		try {
@@ -47,8 +47,8 @@ public class SingleConnection {
 	}
 	
 	/*
-	 * MÈtodo getConnection()
-	 * Respons·vel Por Fazer Uso da Conex„o na AplicaÁ„o
+	 * M√©todo getConnection()
+	 * Respons√°vel Por Fazer Uso da Conex√£o na Aplica√ß√£o
 	 */
 	public static Connection getConnection() {
 		return connection;
